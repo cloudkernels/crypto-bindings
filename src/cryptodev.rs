@@ -42,7 +42,7 @@ pub type __u32 = ::std::os::raw::c_uint;
 pub type __s64 = ::std::os::raw::c_longlong;
 pub type __u64 = ::std::os::raw::c_ulonglong;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct __kernel_fd_set {
     pub fds_bits: [::std::os::raw::c_ulong; 16usize],
 }
@@ -92,7 +92,7 @@ pub type __kernel_size_t = __kernel_ulong_t;
 pub type __kernel_ssize_t = __kernel_long_t;
 pub type __kernel_ptrdiff_t = __kernel_long_t;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct __kernel_fsid_t {
     pub val: [::std::os::raw::c_int; 2usize],
 }
@@ -136,41 +136,41 @@ pub type __le64 = __u64;
 pub type __be64 = __u64;
 pub type __sum16 = __u16;
 pub type __wsum = __u32;
-pub const cryptodev_crypto_op_t_CRYPTO_DES_CBC: cryptodev_crypto_op_t = 1;
-pub const cryptodev_crypto_op_t_CRYPTO_3DES_CBC: cryptodev_crypto_op_t = 2;
-pub const cryptodev_crypto_op_t_CRYPTO_BLF_CBC: cryptodev_crypto_op_t = 3;
-pub const cryptodev_crypto_op_t_CRYPTO_CAST_CBC: cryptodev_crypto_op_t = 4;
-pub const cryptodev_crypto_op_t_CRYPTO_SKIPJACK_CBC: cryptodev_crypto_op_t = 5;
-pub const cryptodev_crypto_op_t_CRYPTO_MD5_HMAC: cryptodev_crypto_op_t = 6;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA1_HMAC: cryptodev_crypto_op_t = 7;
-pub const cryptodev_crypto_op_t_CRYPTO_RIPEMD160_HMAC: cryptodev_crypto_op_t = 8;
-pub const cryptodev_crypto_op_t_CRYPTO_MD5_KPDK: cryptodev_crypto_op_t = 9;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA1_KPDK: cryptodev_crypto_op_t = 10;
-pub const cryptodev_crypto_op_t_CRYPTO_RIJNDAEL128_CBC: cryptodev_crypto_op_t = 11;
-pub const cryptodev_crypto_op_t_CRYPTO_AES_CBC: cryptodev_crypto_op_t = 11;
-pub const cryptodev_crypto_op_t_CRYPTO_ARC4: cryptodev_crypto_op_t = 12;
-pub const cryptodev_crypto_op_t_CRYPTO_MD5: cryptodev_crypto_op_t = 13;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA1: cryptodev_crypto_op_t = 14;
-pub const cryptodev_crypto_op_t_CRYPTO_DEFLATE_COMP: cryptodev_crypto_op_t = 15;
-pub const cryptodev_crypto_op_t_CRYPTO_NULL: cryptodev_crypto_op_t = 16;
-pub const cryptodev_crypto_op_t_CRYPTO_LZS_COMP: cryptodev_crypto_op_t = 17;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA2_256_HMAC: cryptodev_crypto_op_t = 18;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA2_384_HMAC: cryptodev_crypto_op_t = 19;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA2_512_HMAC: cryptodev_crypto_op_t = 20;
-pub const cryptodev_crypto_op_t_CRYPTO_AES_CTR: cryptodev_crypto_op_t = 21;
-pub const cryptodev_crypto_op_t_CRYPTO_AES_XTS: cryptodev_crypto_op_t = 22;
-pub const cryptodev_crypto_op_t_CRYPTO_AES_ECB: cryptodev_crypto_op_t = 23;
-pub const cryptodev_crypto_op_t_CRYPTO_AES_GCM: cryptodev_crypto_op_t = 50;
-pub const cryptodev_crypto_op_t_CRYPTO_CAMELLIA_CBC: cryptodev_crypto_op_t = 101;
-pub const cryptodev_crypto_op_t_CRYPTO_RIPEMD160: cryptodev_crypto_op_t = 102;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA2_224: cryptodev_crypto_op_t = 103;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA2_256: cryptodev_crypto_op_t = 104;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA2_384: cryptodev_crypto_op_t = 105;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA2_512: cryptodev_crypto_op_t = 106;
-pub const cryptodev_crypto_op_t_CRYPTO_SHA2_224_HMAC: cryptodev_crypto_op_t = 107;
-pub const cryptodev_crypto_op_t_CRYPTO_TLS11_AES_CBC_HMAC_SHA1: cryptodev_crypto_op_t = 108;
-pub const cryptodev_crypto_op_t_CRYPTO_TLS12_AES_CBC_HMAC_SHA256: cryptodev_crypto_op_t = 109;
-pub const cryptodev_crypto_op_t_CRYPTO_ALGORITHM_ALL: cryptodev_crypto_op_t = 110;
+pub const CRYPTO_DES_CBC: cryptodev_crypto_op_t = 1;
+pub const CRYPTO_3DES_CBC: cryptodev_crypto_op_t = 2;
+pub const CRYPTO_BLF_CBC: cryptodev_crypto_op_t = 3;
+pub const CRYPTO_CAST_CBC: cryptodev_crypto_op_t = 4;
+pub const CRYPTO_SKIPJACK_CBC: cryptodev_crypto_op_t = 5;
+pub const CRYPTO_MD5_HMAC: cryptodev_crypto_op_t = 6;
+pub const CRYPTO_SHA1_HMAC: cryptodev_crypto_op_t = 7;
+pub const CRYPTO_RIPEMD160_HMAC: cryptodev_crypto_op_t = 8;
+pub const CRYPTO_MD5_KPDK: cryptodev_crypto_op_t = 9;
+pub const CRYPTO_SHA1_KPDK: cryptodev_crypto_op_t = 10;
+pub const CRYPTO_RIJNDAEL128_CBC: cryptodev_crypto_op_t = 11;
+pub const CRYPTO_AES_CBC: cryptodev_crypto_op_t = 11;
+pub const CRYPTO_ARC4: cryptodev_crypto_op_t = 12;
+pub const CRYPTO_MD5: cryptodev_crypto_op_t = 13;
+pub const CRYPTO_SHA1: cryptodev_crypto_op_t = 14;
+pub const CRYPTO_DEFLATE_COMP: cryptodev_crypto_op_t = 15;
+pub const CRYPTO_NULL: cryptodev_crypto_op_t = 16;
+pub const CRYPTO_LZS_COMP: cryptodev_crypto_op_t = 17;
+pub const CRYPTO_SHA2_256_HMAC: cryptodev_crypto_op_t = 18;
+pub const CRYPTO_SHA2_384_HMAC: cryptodev_crypto_op_t = 19;
+pub const CRYPTO_SHA2_512_HMAC: cryptodev_crypto_op_t = 20;
+pub const CRYPTO_AES_CTR: cryptodev_crypto_op_t = 21;
+pub const CRYPTO_AES_XTS: cryptodev_crypto_op_t = 22;
+pub const CRYPTO_AES_ECB: cryptodev_crypto_op_t = 23;
+pub const CRYPTO_AES_GCM: cryptodev_crypto_op_t = 50;
+pub const CRYPTO_CAMELLIA_CBC: cryptodev_crypto_op_t = 101;
+pub const CRYPTO_RIPEMD160: cryptodev_crypto_op_t = 102;
+pub const CRYPTO_SHA2_224: cryptodev_crypto_op_t = 103;
+pub const CRYPTO_SHA2_256: cryptodev_crypto_op_t = 104;
+pub const CRYPTO_SHA2_384: cryptodev_crypto_op_t = 105;
+pub const CRYPTO_SHA2_512: cryptodev_crypto_op_t = 106;
+pub const CRYPTO_SHA2_224_HMAC: cryptodev_crypto_op_t = 107;
+pub const CRYPTO_TLS11_AES_CBC_HMAC_SHA1: cryptodev_crypto_op_t = 108;
+pub const CRYPTO_TLS12_AES_CBC_HMAC_SHA256: cryptodev_crypto_op_t = 109;
+pub const CRYPTO_ALGORITHM_ALL: cryptodev_crypto_op_t = 110;
 pub type cryptodev_crypto_op_t = u32;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -266,6 +266,11 @@ fn bindgen_test_layout_session_op() {
         )
     );
 }
+impl Default for session_op {
+    fn default() -> Self {
+        unsafe { ::std::mem::zeroed() }
+    }
+}
 #[repr(C)]
 #[derive(Copy, Clone)]
 pub struct session_info_op {
@@ -318,6 +323,11 @@ fn bindgen_test_layout_session_info_op_alg_info() {
             stringify!(cra_driver_name)
         )
     );
+}
+impl Default for session_info_op_alg_info {
+    fn default() -> Self {
+        unsafe { ::std::mem::zeroed() }
+    }
 }
 #[test]
 fn bindgen_test_layout_session_info_op() {
@@ -381,6 +391,11 @@ fn bindgen_test_layout_session_info_op() {
             stringify!(flags)
         )
     );
+}
+impl Default for session_info_op {
+    fn default() -> Self {
+        unsafe { ::std::mem::zeroed() }
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -486,6 +501,11 @@ fn bindgen_test_layout_crypt_op() {
             stringify!(iv)
         )
     );
+}
+impl Default for crypt_op {
+    fn default() -> Self {
+        unsafe { ::std::mem::zeroed() }
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -636,6 +656,11 @@ fn bindgen_test_layout_crypt_auth_op() {
         )
     );
 }
+impl Default for crypt_auth_op {
+    fn default() -> Self {
+        unsafe { ::std::mem::zeroed() }
+    }
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct crparam {
@@ -674,6 +699,11 @@ fn bindgen_test_layout_crparam() {
             stringify!(crp_nbits)
         )
     );
+}
+impl Default for crparam {
+    fn default() -> Self {
+        unsafe { ::std::mem::zeroed() }
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -758,15 +788,20 @@ fn bindgen_test_layout_crypt_kop() {
         )
     );
 }
-pub const cryptodev_crk_op_t_CRK_MOD_EXP: cryptodev_crk_op_t = 0;
-pub const cryptodev_crk_op_t_CRK_MOD_EXP_CRT: cryptodev_crk_op_t = 1;
-pub const cryptodev_crk_op_t_CRK_DSA_SIGN: cryptodev_crk_op_t = 2;
-pub const cryptodev_crk_op_t_CRK_DSA_VERIFY: cryptodev_crk_op_t = 3;
-pub const cryptodev_crk_op_t_CRK_DH_COMPUTE_KEY: cryptodev_crk_op_t = 4;
-pub const cryptodev_crk_op_t_CRK_ALGORITHM_ALL: cryptodev_crk_op_t = 5;
+impl Default for crypt_kop {
+    fn default() -> Self {
+        unsafe { ::std::mem::zeroed() }
+    }
+}
+pub const CRK_MOD_EXP: cryptodev_crk_op_t = 0;
+pub const CRK_MOD_EXP_CRT: cryptodev_crk_op_t = 1;
+pub const CRK_DSA_SIGN: cryptodev_crk_op_t = 2;
+pub const CRK_DSA_VERIFY: cryptodev_crk_op_t = 3;
+pub const CRK_DH_COMPUTE_KEY: cryptodev_crk_op_t = 4;
+pub const CRK_ALGORITHM_ALL: cryptodev_crk_op_t = 5;
 pub type cryptodev_crk_op_t = u32;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct cphash_op {
     pub dst_ses: __u32,
     pub src_ses: __u32,
